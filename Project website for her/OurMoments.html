@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Moments ❤️</title>
+
+    <link rel="stylesheet" href="CSS/styleD.css">
+</head>
+
+<body>
+
+    <div class="hearts-container"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            ❤️ Darin Alya
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="IndexD.html">Home</a></li>
+            <li><a href="AboutUS.html">About Us</a></li>
+            <li><a href="OurMoments.html">Our Moments</a></li>
+            <li><a href="Vlog.html">Vlog</a></li>
+        </ul>
+
+        <div class="hamburger" id="hamburger">
+            ☰
+        </div>
+
+    </nav>
+
+    <!-- Hero -->
+
+    <section class="moments-hero">
+
+        <div class="moments-overlay"></div>
+
+        <div class="moments-content">
+
+            <h1 id="momentsTitle"></h1>
+
+            <p>
+                Some pictures are sweet, and some are a little weird, but you know what? Those are the pictures I’ll never delete, because they’re the ones I love the most. "OII AIBB".
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Gallery -->
+
+    <section class="moments-section reveal">
+
+        <h2>Unforgettable Memories ✨</h2>
+
+        <div class="moments-grid">
+
+            <div class="moment-card reveal">
+                <img src="images\First Chap.jpeg" alt="beginning" class="gallery-img">
+
+                <div class="moment-info">
+                    <h3>The Beginning ❤️</h3>
+                    <p>
+                       A little jokes, a little laughter, a little bullying, and a little shyness. Who would’ve thought all those little moments would turn into what we have today hehe?Thanks for the ZUS KOPI btw for me as the first timer hehe.
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="moment-card reveal">
+                <img src="images\Photobooth pictures.jpeg" alt="photobooth" class="gallery-img">
+
+                <div class="moment-info">
+                    <h3>Photobooth Day 📷🌸</h3>
+                    <p>
+                        Going to Solace Studios, our favorite place to take photos, and capturing sweet moments together.
+                        A few pictures,but have a lot of memories and there was you, right in the all those little moments. I think that’s what made me love this moments so much.
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="moment-card reveal">
+                <img src="images\Beach date.jpeg" alt="beach" class="gallery-img">
+
+                <div class="moment-info">
+                    <h3>First Beach Date ✨</h3>
+                    <p>
+                        I’ve realized that every first experience I’ve had was because of you, and I got to experience it all with you hehe.
+                        Tried the ATV and Malatang for the first time with you,make the moments truly meeaningful and have a lot of joy.
+                    </p>
+                </div>
+            </div>
+
+            <div class="moment-card reveal">
+                <img src="images\chat lmk.jpeg" alt="sweet" class="gallery-img">
+
+                <div class="moment-info">
+                    <h3>Getting Closer 💖</h3>
+                    <p>
+                        Who would’ve thought that a simple little conversation between us would turn into a memory I’ll never forget?
+
+                        I never knew that one simple conversation could lead me to you and become such a meaningful part of our life.
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="moment-card reveal">
+                <img src="images\first eid.jpeg" alt="eid" class="gallery-img">
+
+                <div class="moment-info">
+                    <h3>Our First Eid  🌷</h3>
+                    <p>
+                        I’ve never experienced anything like this before, especially with someone I love so much. I never thought I’d get the chance to have moments like this with someone so special to me. Honestly, I’m really grateful that I get to experience all of this with you. ❤️
+
+                </div>
+            </div>
+
+            <div class="moment-card reveal">
+                <img src="images\weirdo pictures.jpeg" alt="weirdo" class="gallery-img">
+
+                <div class="moment-info">
+                    <h3>Forever Weirdo ❤️</h3>
+                    <p>
+                        Thank you for every beautiful,weird,goofy,our favourite pose,awakward moments,clingy times, and unforgettable memory.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Lightbox -->
+
+    <div class="lightbox" id="lightbox">
+
+        <span class="close-lightbox">&times;</span>
+
+        <img id="lightbox-img">
+
+    </div>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h3>For Darin Alya ❤️</h3>
+
+        <p>
+            Every memory here means something special.
+        </p>
+
+    </footer>
+
+    <script src="Javascript/script.js"></script>
+
+    <script>
+
+        const galleryImages =
+            document.querySelectorAll(".gallery-img");
+
+        const lightbox =
+            document.getElementById("lightbox");
+
+        const lightboxImg =
+            document.getElementById("lightbox-img");
+
+        const closeLightbox =
+            document.querySelector(".close-lightbox");
+
+        galleryImages.forEach(img => {
+
+            img.addEventListener("click", () => {
+
+                lightbox.style.display = "flex";
+
+                lightboxImg.src = img.src;
+
+            });
+
+        });
+
+        closeLightbox.addEventListener("click", () => {
+
+            lightbox.style.display = "none";
+
+        });
+
+        lightbox.addEventListener("click", (e) => {
+
+            if (e.target === lightbox) {
+
+                lightbox.style.display = "none";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
